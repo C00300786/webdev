@@ -8,8 +8,7 @@
 <body>
 
     <?php
-        echo date();
-        echo "";
+        
         echo date("M/d/Y");
         echo date();
         echo "";
