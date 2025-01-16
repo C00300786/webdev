@@ -11,7 +11,7 @@
         $first = "Hello";
         $second = "Jamie";
 
-        echo $first + " " + $second;
+        echo $first . " " . $second;
     ?>
     
 </body>
