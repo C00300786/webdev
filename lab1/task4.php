@@ -11,13 +11,17 @@
         $first = 5;
         $second = 10;
 
-        if ($first != $second) 
+        if ($first == $second) 
         {
-           echo "they are not equel";
+           echo "they are equel";
+        }
+        else if ($first > $second)
+        {
+            echo "the first number is bigger";
         }
         else
         {
-            echo "they are equal";
+            echo "the second num is bigger";
         }
     ?>
     
