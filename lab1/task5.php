@@ -14,12 +14,12 @@
         echo date();
         echo "";
         echo date("l/M/Y");
-        echo date()
-        echo ""
-        echo date("D/M/Y")
-        echo date()
-        echo ""
-        echo date("l,m,d,Y")
+        echo date();
+        echo "";
+        echo date("D/M/Y");
+        echo date();
+        echo "";
+        echo date("l,m,d,Y");
     ?>
     
 </body>
