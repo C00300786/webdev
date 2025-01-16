@@ -10,13 +10,12 @@
     <?php
         
         echo date("M/d/Y");
-        echo date();
-        echo "";
-        echo date("l/M/Y");
-        echo date();
         echo "";
         echo date("D/M/Y");
-        echo date();
+        echo "";
+        echo date("d/m/Y");
+        echo "";
+        echo date("d/n/y");
         echo "";
         echo date("l,m,d,Y");
     ?>
