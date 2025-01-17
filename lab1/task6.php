@@ -9,8 +9,8 @@
 
     <?php
         
-      $cart array("Bread","Butter","Mayonaise","Ham")
-      echo $cart
+      $cart array("Bread","Butter","Mayonaise","Ham");
+      echo $cart;
     ?>
     
 </body>
