@@ -9,8 +9,12 @@
 
     <?php
         
-      $cart array("Bread","Butter","Mayonaise","Ham");
-      echo $cart;
+      $cart = array("Bread","Butter","Mayonaise","Ham");
+      for ($i=0; $i < 3; $i++) 
+      { 
+       echo  $cart[$i];
+       echo "<br>";        
+      }
     ?>
     
 </body>
