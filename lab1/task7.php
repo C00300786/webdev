@@ -8,9 +8,20 @@
 <body>
 
     <?php
-        
-      $cart = array("Cereal" => 5.00,"Coffee" => 2.50,"Bannan" => 3.50, "Onions" => 1.00,"Lettuce" => 2.40, "tomatos" => 3.50) ;
-      var_dump( $cart );
+    //array
+      $cart = [
+        "Cereal" => 5.00,
+        "Coffee" => 2.50,
+        "Bananas" => 3.50,
+        "Onions" => 1.00,
+        "Lettuce" => 2.40,
+        "Tomatoes" => 3.50,
+    ];
+    
+    // Output each item's name and price
+    foreach ($cart as $item => $price) {
+        echo "Item: $item costs Price: $" . number_format($price, 2) . "\n";
+    }
     ?>
     
 </body>
