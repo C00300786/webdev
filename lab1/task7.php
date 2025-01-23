@@ -20,7 +20,7 @@
     
     // Output each item's name and price
     foreach ($cart as $item => $price) {
-        echo "Item: $item costs Price: $" . number_format($price, 2) . "\n";
+        echo "Item: $item costs : $" . number_format($price, 2) . "<BR>";
     }
     ?>
     
