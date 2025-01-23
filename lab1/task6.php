@@ -10,7 +10,7 @@
     <?php
         
       $cart = array("Bread","Butter","Mayonaise","Ham");
-      for ($i=0; $i < 3; $i++) 
+      for ($i=0; $i < 4; $i++) 
       { 
        echo  $cart[$i];
        echo "<br>";        
