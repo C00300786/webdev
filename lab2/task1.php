@@ -8,10 +8,10 @@
 <body>
     <form method="post" action="">
             <label for="Fname">enter your first name</label>
-            <input id="Fname">
+            <input id="Fname" name="Fname">
             <br>
             <label for="lname">enter your last name</label>
-            <input id="lname">
+            <input id="lname" name="lname">
             <br>
             <button type="submit">Enter</button>
     </form>
@@ -19,7 +19,7 @@
         if ($_SERVER['REQUEST_METHOD'] === 'POST')
         {
             $fname = $_POST['Fname'];
-            $lname = $POST['lname'];
+            $lname = $_POST['lname'];
             echo"<h2>have a good day $fname $lname </h2>";
         }
     ?>
