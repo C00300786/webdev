@@ -7,7 +7,7 @@
 </head>
     <?php
         
-            echo"<h2>have a good day $Fname $lname"
+            echo"<h2>have a good day $_POST[Fname] $_POST[lname]"
     ?>
 </body>
 </html>
