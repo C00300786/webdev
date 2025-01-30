@@ -12,7 +12,20 @@
         $password = "WordPass123";
         $dbname = "persons";
 
-        $con = mysqli_connect($hostname,$password,$dbname)
+        $con = mysqli_connect($hostname,$username,$password,$dbname)
+    
+        $sql = "Slect * from persons";
+
+        $result = mysqli_query($con,$sql);
+
+        echo "<br> the persons table contains the following records:<br>";
+
+        while($row=mysql_fetch_array($result))
+        {
+            echo $row['personId'] . " " . $row['firstname'] . " " . $row['lastame'] . "<br>"
+        }
+
+        mysqli_close($con)
     ?>
     </form>
 </body>
