@@ -20,7 +20,7 @@
         {
             $hight = $_POST['Fname'];
             $weight = $_POST['lname'];
-            $bmi = $hight / ($weight * $weight);
+            $bmi = $weight / ($hight * $hight);
 
             echo"<h2>your bmi is $bmi </h2>";
         }
