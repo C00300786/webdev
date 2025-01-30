@@ -18,7 +18,7 @@
     <?php
         if ($_SERVER['REQUEST_METHOD'] === 'UPDATE')
         {
-            echo"<h2>have a good day $Fname $lname";
+            echo"<h2>have a good day $Fname $lname</h2>";
         }
     ?>
 </body>
