@@ -20,11 +20,11 @@
         {
             $name = $_POST['name'];
             
-            $dobDats = date('d/m/y', strtotime('$_POST[dob]'));
+            $dobDats = date('d/m/y', strtotime($_POST["dob"]));
             echo"<h2> $name your dob was $dobDats </h2><br>";
-            $dobDay = date('l/d/m/y', strtotime('$_POST[dob]'));
+            $dobDay = date('l/d/m/y', strtotime($_POST["dob"]));
             echo"<h2> $name your dob was $dobDay </h2><br>";
-            $dobyr = date('Y', strtotime('$_POST[dob]'));
+            $dobyr = date('Y', strtotime($_POST["dob"]));
             echo"<h2> $name your dob was $dobyr </h2><br>";
 
 
