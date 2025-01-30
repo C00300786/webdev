@@ -6,19 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="update" action="">
-            <label for="Fname">:enter your first name</label>
+    <form method="post" action="">
+            <label for="Fname">enter your first name</label>
             <input id="Fname">
             <br>
-            <label for="lname">:enter your last name</label>
+            <label for="lname">enter your last name</label>
             <input id="lname">
             <br>
             <button type="submit">Enter</button>
     </form>
     <?php
-        if ($_SERVER['REQUEST_METHOD'] === 'UPDATE')
+        if ($_SERVER['REQUEST_METHOD'] === 'POST')
         {
-            echo"<h2>have a good day $Fname $lname</h2>";
+            $fname = $_POST['Fname'];
+            $lname = $POST['lname'];
+            echo"<h2>have a good day $fname $lname </h2>";
         }
     ?>
 </body>
