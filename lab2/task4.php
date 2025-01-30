@@ -12,9 +12,9 @@
         $password = "WordPass123";
         $dbname = "persons";
 
-        $con = mysqli_connect($hostname,$username,$password,$dbname)
+        $con = mysqli_connect($hostname,$username,$password,$dbname);
     
-        $sql = "Slect * from persons";
+        $sql = "Select * from persons";
 
         $result = mysqli_query($con,$sql);
 
@@ -22,10 +22,10 @@
 
         while($row=mysql_fetch_array($result))
         {
-            echo $row['personId'] . " " . $row['firstname'] . " " . $row['lastame'] . "<br>"
+            echo $row['personId'] . " " . $row['firstname'] . " " . $row['lastame'] . "<br>";
         }
 
-        mysqli_close($con)
+        mysqli_close($con);
     ?>
     </form>
 </body>
