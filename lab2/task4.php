@@ -6,17 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post" action="showDetails.php">
-        <p>
-            <label for="feet">Feet</label>
-            <input type="text" name="feet" id="feet" placeholder="Feet" required>
-        </p>
-        <p>
-            <label for="inches"></label>
-            <input type="text" name="inches" id="inches"placeholder="Inches"required>
-        </p>
-        <input type="Submit" value="Submit">
-        <input type="Reset" value="Clear">
+    <?php
+        $hostname = "loacalhost";
+        $username = "C00300786";
+        $password = "WordPass123"
+        $dbname = "persons";
+
+        $con = mysqli_connect($hostname,$password, $dbname)
+    ?>
     </form>
 </body>
 </html>
