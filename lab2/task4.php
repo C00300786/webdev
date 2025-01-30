@@ -9,10 +9,10 @@
     <?php
         $hostname = "loacalhost";
         $username = "C00300786";
-        $password = "WordPass123"
+        $password = "WordPass123";
         $dbname = "persons";
 
-        $con = mysqli_connect($hostname,$password, $dbname)
+        $con = mysqli_connect($hostname,$password,$dbname)
     ?>
     </form>
 </body>
