@@ -7,9 +7,9 @@
 </head>
 <body>
     <?php
-        $hostname = "loacalhost";
+        $hostname = "localhost";
         $username = "C00300786";
-        $password = "WordPass123";
+        $password = "Wordpass@123@";
         $dbname = "MYDBc00300786";
 
         $con = mysqli_connect($hostname,$username,$password,$dbname);
@@ -20,7 +20,7 @@
 
         echo "<br> the persons table contains the following records:<br>";
 
-        while($row=mysql_fetch_array($result))
+        while($row=mysqli_fetch_array($result))
         {
             echo $row['personId'] . " " . $row['firstname'] . " " . $row['lastame'] . "<br>";
         }
