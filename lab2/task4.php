@@ -10,7 +10,7 @@
         $hostname = "loacalhost";
         $username = "C00300786";
         $password = "WordPass123";
-        $dbname = "persons";
+        $dbname = "MYDBc00300786";
 
         $con = mysqli_connect($hostname,$username,$password,$dbname);
     
