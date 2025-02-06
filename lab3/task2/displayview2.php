@@ -20,4 +20,16 @@ if ($rowcount == 1)
     $_SESSION('dob')=$_row('DOB');
     $_SESSION('email')=$_row('Email');
     $_SESSION('phone')=$_row('Phone');
+}else if($rowcount == 0)
+
+{
+    unset $_SESSION('personid');
+    unset $_SESSION('firstname');
+    unset $_SESSION('lastname');
+    unset $_SESSION('dob');
+    unset $_SESSION('email');
+    unset $_SESSION('phone'); 
 }
+mysqli_close($con)
+
+header('view.html2.php')
