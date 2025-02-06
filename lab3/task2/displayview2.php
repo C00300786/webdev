@@ -30,6 +30,7 @@ if ($rowcount == 1)
     unset ($_SESSION['email']);
     unset ($_SESSION['phone']); 
 }
-mysqli_close($con)
+mysqli_close($con);
 
-header('view.html2.php')
+header('view.html2.php');
+?>
