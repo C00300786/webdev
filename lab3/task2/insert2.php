@@ -1,17 +1,19 @@
 <?php
     include 'db.inc2.php';
     date_default_timezone_set("UTC");
-    echo "The details sent down are: <br>";
-    echo "First Name is : $fname <br>";
-    echo "Surname is : $lname <br>";
-    echo "email is : $mail <br>";
-    echo "Phone num is : $num <br>";
+    
 
     $fname = $_POST['firstname']."<br>"; 
     $lname = $_POST['surname'] . "<br>";
     $date=date_create($_POST['dob']);
     $mail =$_POST['email'] . "<br>";
     $num =$_POST['phone'] . "<br>";
+    
+    echo "The details sent down are: <br>";
+    echo "First Name is : $fname <br>";
+    echo "Surname is : $lname <br>";
+    echo "email is : $mail <br>";
+    echo "Phone num is : $num <br>";
 
     echo "Date of Birth is:" . date_format($date, "d/m/Y") . "<br>";
     
