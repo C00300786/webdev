@@ -19,9 +19,9 @@ if($rowcount == 1)
     echo "Last Name is :";
     echo $row["lastname"] ."<br>";
     echo "email is :";
-    echo $row["email"] ."<br>";
+    echo $row["Email"] ."<br>";
     echo "phone num is :";
-    echo $row["phone"] ."<br>";
+    echo $row["Phone"] ."<br>";
 
     $date = date_create($row["DOB"]);
     echo "Date of birth is :" . date_format($date,"d/m/Y");
