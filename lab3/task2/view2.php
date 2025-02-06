@@ -31,7 +31,7 @@ if($rowcount == 1)
 }
 mysqli_close($con);
 ?>
-<form action="view.html" method="POST">
+<form action="view2.html" method="POST">
     <br>
     <input type="submit" value="Return to select page">
 </form>
