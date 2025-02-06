@@ -1,5 +1,5 @@
 <?php
-    include 'db.inc.php';
+    include 'db.inc.php2';
     date_default_timezone_set("UTC");
     echo "The details sent down are: <br>";
     echo "First Name is";

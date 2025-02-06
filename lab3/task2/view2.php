@@ -1,5 +1,5 @@
 <?php
-include 'db.inc.php;';
+include 'db.inc2.php';
 date_default_timezone_set("UTC");
 
 $sql = "Select * from persons where personid = " . $_POST['personid'];
@@ -25,9 +25,7 @@ if($rowcount == 1)
 
     $date = date_create($row["DOB"]);
     echo "Date of birth is :" . date_format($date,"d/m/Y");
-}
-
-else if ($rowcount == 0);
+}else
 {
     echo"No matching records";
 }

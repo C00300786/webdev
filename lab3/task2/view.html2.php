@@ -4,7 +4,7 @@ session_start();
 <html>
 
 <body>
-    <form action="displayview.php" method="Post">
+    <form action="displayview.php2" method="Post">
         <p><label for="personid"> Enter the personid you want to find</label>
 
             <input type="text" name="personid" id="personid" placeholder="person id" autocomplete=off required value="<?php if (isset($_SESSION['personid']))
