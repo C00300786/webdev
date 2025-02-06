@@ -1,5 +1,5 @@
 <?php
-include 'db.inc.php;';
+include 'db.inc.php';
 date_default_timezone_set("UTC");
 
 $sql = "Select * from persons where personid = " . $_POST['personid'];
