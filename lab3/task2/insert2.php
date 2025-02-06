@@ -2,8 +2,8 @@
     include 'db.inc2.php';
     date_default_timezone_set("UTC");
     echo "The details sent down are: <br>";
-    echo "First Name is";
-    echo "Surname is :";
+    echo "First Name is: <br>";
+    echo "Surname is : <br>";
 
     $_POST['firstname']."<br>"; 
     $_POST['surname'] . "<br>";
