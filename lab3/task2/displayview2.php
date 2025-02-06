@@ -1,5 +1,11 @@
 <?php
 session_start();
+$hostname = "localhost";
+$username = "C00300786";
+$password = "Wordpass@123@";
+$dbname = "MYDBc00300786";
+
+$con = mysqli_connect($hostname,$username,$password,$dbname);
 
 $sql = "Select * from persons where  personid = " . $_POST['personid'];
 
