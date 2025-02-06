@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="insert.php" method="post">
+        <p><label for="firstname"> First name</label>
+            <input type="text" name="firstname" id="firstname" placeholder= "first name" 
+            autocomplete-off required/>
+        </p>  
+
+        <p><label for="surname">Last Name</label>
+            <input type="text" name="surname" id="surname" placeholder="Surname" required/>
+        </p>
+        
+        <p><label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="Email" />
+        </p>
+
+        <p><label for="phone">Phone</label>
+            <input type="number" name="phone" id="phone" placeholder="Phone" />
+        </p>
+
+        <p><label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob" placeholder="date of Birth"/>
+        </p> 
+        
+        <br>
+            <input type="submit" value="Submit"/> <input type="reset" value="Clear" />
+        <p>
+    </form>
+</body>
+</html>
