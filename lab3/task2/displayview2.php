@@ -1,35 +1,26 @@
 <?php
 session_start();
-$hostname = "localhost";
-$username = "C00300786";
-$password = "Wordpass@123@";
-$dbname = "MYDBc00300786";
+include 'db.inc2.php';
 
-$con = mysqli_connect($hostname,$username,$password,$dbname);
-
-$sql = "Select * from persons where  personid = " . $_POST['personid'];
+$sql = "Select * from persons where  personid = ".$_POST['personid'];
 
 if (!$result = mysqli_query($con,$sql)) 
 {
-    die(' Error in the database or query') . mysqli_error($con);
+    die(' Error in the database or query' . mysqli_error($con));
 }
 $rowcount = mysqli_affected_rows($con);
 
-$_SESSION['personid']=$_POST['personid'];
+$_SESSION['personid'] = $_POST['personid'];
 if ($rowcount == 1)
 {
     $row = mysqli_fetch_array($result);
 
-    $_SESSION['personid']=$_row['personid'];
-    $_SESSION['firstname']=$_row['firstname'];
-    $_SESSION['lastname']=$_row['lastname'];
-    $_SESSION['dob']=$_row['DOB'];
-    $_SESSION['email']=$_row['Email'];
-    $_SESSION['phone']=$_row['Phone'];
+    $_SESSION['personid']=$row['personid'];
+    $_SESSION['firstname']=$row['firstname'];
+    $_SESSION['lastname']=$row['lastname'];
+    $_SESSION['dob']=$row['DOB'];
 }else if($rowcount == 0)
-
 {
-    unset ($_SESSION['personid']);
     unset ($_SESSION['firstname']);
     unset ($_SESSION['lastname']);
     unset ($_SESSION['dob']);
@@ -38,5 +29,5 @@ if ($rowcount == 1)
 }
 mysqli_close($con);
 
-header('view.html2.php');
+header("Location: view.html2.php");
 ?>

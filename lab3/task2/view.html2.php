@@ -23,12 +23,14 @@ session_start();
                 <input type="text" name="dob" id="dob" placeholder="Date of Birth" disabled
                     value="<?php if (isset($_SESSION['dob'])) echo $_SESSION['dob'] ?>" />
             </p>
-            <p><label for="email">Email</label>
-            <input type="text" name="email" id="email" placeholder="Email" />
+                <p><label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Email"
+                value="<?php if (isset($_SESSION['Email'])) echo $_SESSION['Email'] ?>" />
             </p>
 
             <p><label for="phone">Phone</label>
-                <input type="number" name="phone" id="phone" placeholder="Phone" />
+                <input type="number" name="phone" id="phone" placeholder="Phone"
+                value="<?php if (isset($_SESSION['Phone'])) echo $_SESSION['Phone'] ?>" />
             </p>
 
             <br> <br>
