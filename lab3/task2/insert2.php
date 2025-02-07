@@ -29,7 +29,7 @@
     
     mysqli_close($con);
 ?>
-<form action = "insert.html" method="POST" >
+<form action = "insert2.html" method="POST" >
 <br>
     <input type="submit" value="Return to Insert Page"/>
 </form>
