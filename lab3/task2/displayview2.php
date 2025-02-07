@@ -19,6 +19,10 @@ if ($rowcount == 1)
     $_SESSION['firstname']=$row['firstname'];
     $_SESSION['lastname']=$row['lastname'];
     $_SESSION['dob']=$row['DOB'];
+	$_SESSION['email']=$row['Email'];
+	$_SESSION['phone']=$row['Phone'];
+	
+	
 }else if($rowcount == 0)
 {
     unset ($_SESSION['firstname']);

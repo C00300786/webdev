@@ -24,13 +24,13 @@ session_start();
                     value="<?php if (isset($_SESSION['dob'])) echo $_SESSION['dob'] ?>" />
             </p>
                 <p><label for="email">Email</label>
-                <input type="text" name="email" id="email" placeholder="Email"
-                value="<?php if (isset($_SESSION['Email'])) echo $_SESSION['Email'] ?>" />
+                <input type="text" name="email" id="email" placeholder="Email" disabled
+                value="<?php if (isset($_SESSION['email'])) echo $_SESSION['email'] ?>" />
             </p>
 
             <p><label for="phone">Phone</label>
-                <input type="number" name="phone" id="phone" placeholder="Phone"
-                value="<?php if (isset($_SESSION['Phone'])) echo $_SESSION['Phone'] ?>" />
+                <input type="text" name="phone" id="phone" placeholder="Phone" disabled
+                value="<?php if (isset($_SESSION['phone'])) echo $_SESSION['phone'] ?>" />
             </p>
 
             <br> <br>
