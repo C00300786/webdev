@@ -2,7 +2,7 @@
 session_start();
 include 'db.inc2.php';
 
-$sql = "Select * from persons where  personid = ".$_POST['personid'];
+$sql = "Select * from persons where personid = ".$_POST['personid'];
 
 if (!$result = mysqli_query($con,$sql)) 
 {
