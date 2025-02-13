@@ -31,5 +31,27 @@
 
     // SQL query to insert the form data into the 'Students' table in the database
     // The values from the POST request are inserted into respective columns
-    $sql = "INSERT INTO Students (StudentName, StudentAddress, DateOfBirth, StudentPhone, CourseCode)
-            VALUES ('$_POST[StudentName]', '$_POST[StudentAddress]', '$_POST[dob]', '$_POST[StudentPhone]', '$_POST
+
+    // SQL query to insert data into the 'persons' table
+    $sql = "Insert into persons (StudentName, lastname, DOB, CourseCode, StudentPhone)
+    VALUES ('$_POST[StudentName]', '$_POST[StudentAddress]', '$_POST[dob]' , '$_POST[CourseCode]', '$_POST[StudentPhone]')";
+    
+    // Execute the query
+    if (mysqli_query($con, $sql)) {
+        // If the query fails, output an error message and terminate the script
+        die ("An Error in the SQL Query: " . mysqli_error($con) );
+    }
+    
+    // If the query is successful, display a success message
+    echo "<br>A record has been added for" . $_POST['StudentName']." ". $_POST['StudentAddress']. "."; 
+    
+    // Close the database connection
+    mysqli_close($con);
+    ?>
+    
+    <!-- HTML form that allows the user to return to the previous insert page -->
+    <form action = "insert3.html" method="POST" >
+        <br>
+        <!-- Button to submit and return to the insert page -->
+        <input type="submit" value="Return to Insert Page"/>
+    </form>
