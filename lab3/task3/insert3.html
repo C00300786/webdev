@@ -1,35 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Set the character encoding for the document -->
     <meta charset="UTF-8">
+    
+    <!-- Viewport settings to ensure the page scales well on different devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to external CSS file to style the form -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link to external js file for validation on the form -->
+    <script src="formValidation.js"></script>
+
+
+    <!-- Title of the document shown in the browser tab -->
     <title>Document</title>
+
 </head>
 <body>
+    <!-- Start of the form, submitting to 'insert3.php' using POST method -->
     <form action="insert3.php" method="post">
-        <p><label for="StudentName"> Student name</label>
-            <input type="text" name="StudentName" id="StudentName" placeholder= "first name" 
-            autocomplete-off required/>
+        
+        <!-- Student Name input field -->
+        <p>
+            <label for="StudentName"> Student name</label>
+            <!-- Text input for student name with autocomplete off and required field -->
+            <input type="text" name="StudentName" id="StudentName" placeholder="first name" autocomplete-off required/>
         </p>  
 
-        <p><label for="StudentAddress">Last Name</label>
+        <!-- Student Address input field -->
+        <p>
+            <label for="StudentAddress">Last Name</label>
+            <!-- Text input for student address/last name with a placeholder and required field -->
             <input type="text" name="StudentAddress" id="StudentAddress" placeholder="StudentAddress" required/>
         </p>
         
-        <p><label for="CourseCode">CourseCode</label>
+        <!-- Course Code input field -->
+        <p>
+            <label for="CourseCode">CourseCode</label>
+            <!-- Text input for course code with a placeholder -->
             <input type="text" name="CourseCode" id="CourseCode" placeholder="CourseCode" />
         </p>
 
-        <p><label for="StudentPhone">StudentPhone</label>
+        <!-- Student Phone number input field -->
+        <p>
+            <label for="StudentPhone">StudentPhone</label>
+            <!-- Text input for student phone with a placeholder -->
             <input type="text" name="StudentPhone" id="StudentPhone" placeholder="StudentPhone" />
         </p>
 
-        <p><label for="dob">Date of Birth</label>
-            <input type="date" name="dob" id="dob" placeholder="date of Birth"/>
+        <!-- Date of Birth input field -->
+        <p>
+            <label for="dob">Date of Birth</label>
+            <!-- Date input for student birthdate with a placeholder -->
+            <input type="date" name="dob" id="DateOfBirth" placeholder="date of Birth"/>
         </p> 
         
+        <!-- Line break for visual separation -->
         <br>
-            <input type="submit" value="Submit"/> <input type="reset" value="Clear" />
+        
+        <!-- Submit and reset buttons -->
+        <input type="submit" value="Submit"/> 
+        <input type="reset" value="Clear" />
+        
+        <!-- End of the form -->
         <p>
     </form>
 </body>

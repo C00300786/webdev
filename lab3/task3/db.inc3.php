@@ -1,5 +1,5 @@
 <?php
-    $hostname = "localhost";
+    $hostname = "localhost";//db login cridentioals
     $username = "C00300786";
     $password = "Wordpass@123@";
     $dbname = "MYDBc00300786";
