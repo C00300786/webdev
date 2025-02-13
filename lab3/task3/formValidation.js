@@ -35,8 +35,8 @@ function is16(dob) {
     }
 
     // Confirm with the user before submitting the form
-    const confirmSubmit = confirm("Are you sure you want to submit the form?");
-    if (!confirmSubmit) {
-        event.preventDefault(); // Prevent form submission if the user cancels
+    function Confirm()
+    {
+        confirm("Are you sure")
     }
 });
