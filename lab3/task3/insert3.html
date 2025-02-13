@@ -26,7 +26,7 @@
 </head>
 <body>
     <!-- Start of the form, submitting to 'insert3.php' using POST method -->
-    <form action="insert3.php" method="post">
+    <form action="insert3.php" method="post" onsubmit="Confirm(SubmitEvent)">
         
         <!-- Student Name input field -->
         <p>
@@ -67,7 +67,7 @@
         <br>
         
         <!-- Submit and reset buttons -->
-        <input type="submit" value="Submit" Onclick="Confirm()"/> 
+        <input type="submit" value="Submit"/> 
         <input type="reset" value="Clear" />
         
         <!-- End of the form -->

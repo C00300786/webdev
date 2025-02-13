@@ -38,7 +38,10 @@ function is16(dob) {
     // Confirm with the user before submitting the form
    
     });
-    function Confirm()
+    function Confirm(SubmitEvent)
     {
-        confirm("Are you sure")
+        if(!confirm("Are you sure"))
+        {
+            SubmitEvent.preventDefault();
+        }
     }
