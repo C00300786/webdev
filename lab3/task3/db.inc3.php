@@ -1,3 +1,9 @@
+<!--
+    name:   jamie williamson
+    id:     c00300786
+    lab;    3
+    task:   3
+-->
 <?php
     $hostname = "localhost";//db login cridentioals
     $username = "C00300786";
@@ -11,3 +17,4 @@
         die("Failed to connect". mysqli_connect_error());
     }
     ?>
+    

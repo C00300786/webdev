@@ -1,35 +1,68 @@
+<!--
+    name:   jamie williamson
+    id:     c00300786
+    lab:    3
+    task:   2
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Define character encoding for the document -->
     <meta charset="UTF-8">
+    
+    <!-- Ensure the page is responsive on different devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage -->
     <title>Document</title>
 </head>
 <body>
+    <!-- Form for submitting personal information, sending data to 'insert2.php' via POST method -->
     <form action="insert2.php" method="post">
-        <p><label for="firstname"> First name</label>
-            <input type="text" name="firstname" id="firstname" placeholder= "first name" 
-            autocomplete-off required/>
+        
+        <!-- First Name input field -->
+        <p>
+            <label for="firstname"> First name</label>
+            <!-- Text input for the user's first name with autocomplete turned off and marked as required -->
+            <input type="text" name="firstname" id="firstname" placeholder="first name" autocomplete="off" required/>
         </p>  
 
-        <p><label for="surname">Last Name</label>
+        <!-- Last Name input field -->
+        <p>
+            <label for="surname">Last Name</label>
+            <!-- Text input for the user's last name, required field -->
             <input type="text" name="surname" id="surname" placeholder="Surname" required/>
         </p>
         
-        <p><label for="email">Email</label>
+        <!-- Email input field -->
+        <p>
+            <label for="email">Email</label>
+            <!-- Text input for the user's email -->
             <input type="text" name="email" id="email" placeholder="Email" />
         </p>
 
-        <p><label for="phone">Phone</label>
+        <!-- Phone input field -->
+        <p>
+            <label for="phone">Phone</label>
+            <!-- Number input for the user's phone number -->
             <input type="number" name="phone" id="phone" placeholder="Phone" />
         </p>
 
-        <p><label for="dob">Date of Birth</label>
+        <!-- Date of Birth input field -->
+        <p>
+            <label for="dob">Date of Birth</label>
+            <!-- Date input for the user's date of birth -->
             <input type="date" name="dob" id="dob" placeholder="date of Birth"/>
         </p> 
         
+        <!-- Line break for better layout -->
         <br>
-            <input type="submit" value="Submit"/> <input type="reset" value="Clear" />
+        
+        <!-- Submit and reset buttons -->
+        <input type="submit" value="Submit"/> 
+        <input type="reset" value="Clear" />
+        
+        <!-- End of the form -->
         <p>
     </form>
 </body>

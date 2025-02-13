@@ -1,3 +1,9 @@
+<!--
+    name:   jamie williamson
+    id:     c00300786
+    lab;    3
+    task:   2
+-->
 <?php
     $hostname = "localhost";
     $username = "C00300786";

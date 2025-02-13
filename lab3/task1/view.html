@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Setting the character encoding for the page as UTF-8 to support a wide range of characters -->
     <meta charset="UTF-8">
+    
+    <!-- Viewport settings to ensure the page scales well on different devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the document, shown in the browser tab -->
     <title>Document</title>
 </head>
 <body>
+    <!-- Start of the form with POST method to send data to 'view.php' -->
     <form action="view.php" method="post">
+        
+        <!-- Label for entering the personid -->
         <p>
-        <label> Enter the persons of the record you want to view
-            <input type="text" name="personid" id="personid" placeholder="person id" autocomplete="off" required>(Person id)
-        </label>
-    </p>
-    <br><br>
-    <input type="submit" value="Submit">
-    <input type="reset" value="Clear">
-</form>
+            <label> Enter the person's record you want to view
+                <!-- Input field for the person id. The 'required' attribute ensures the user cannot submit the form without filling it out -->
+                <input type="text" name="personid" id="personid" placeholder="person id" autocomplete="off" required>
+                (Person id)
+            </label>
+        </p>
+        
+        <!-- Break for some space between form elements -->
+        <br><br>
+        
+        <!-- Submit button to send the form data to 'view.php' -->
+        <input type="submit" value="Submit">
+        
+        <!-- Reset button to clear the input field if the user changes their mind -->
+        <input type="reset" value="Clear">
+    </form>
     
 </body>
 </html>

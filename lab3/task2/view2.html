@@ -1,21 +1,43 @@
+<!--
+    name:   jamie williamson
+    id:     c00300786
+    lab;    3
+    task:   2
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- The character encoding is set to UTF-8 for proper character rendering -->
     <meta charset="UTF-8">
+    
+    <!-- The viewport is set to ensure the page scales correctly on mobile and desktop devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- The title that appears in the browser tab -->
     <title>Document</title>
 </head>
 <body>
+    <!-- The form to take input from the user -->
     <form action="view2.php" method="post">
+        
+        <!-- Label and input field for the person ID -->
         <p>
-        <label> Enter the persons of the record you want to view
-            <input type="text" name="personid" id="personid" placeholder="person id" autocomplete="off" required>(Person id)
-        </label>
-    </p>
-    <br><br>
-    <input type="submit" value="Submit">
-    <input type="reset" value="Clear">
-</form>
-    
+            <label> Enter the person details you want to view:
+                <!-- Text input for the person ID with placeholder and required attribute -->
+                <input type="text" name="personid" id="personid" placeholder="person id" autocomplete="off" required>
+                <!-- The text "(Person id)" is placed in the label as an extra hint -->
+            </label>
+        </p>
+        
+        <!-- Line break and additional spacing for clarity -->
+        <br><br>
+        
+        <!-- Submit button to submit the form -->
+        <input type="submit" value="Submit">
+        
+        <!-- Reset button to clear the form -->
+        <input type="reset" value="Clear">
+    </form>
 </body>
 </html>

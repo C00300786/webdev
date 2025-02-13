@@ -1,3 +1,9 @@
+<!--
+    name:   jamie williamson
+    id:     c00300786
+    lab;    3
+    task:   3
+-->
 <?php
     // Include the database connection file (db.inc3.php) for connecting to the database
     include 'db.inc3.php';
