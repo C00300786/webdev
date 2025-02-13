@@ -16,7 +16,8 @@ function is16(dob) {
 }
 
 // Attach an event listener to the form submit
-    document.querySelector('form').addEventListener('submit', function(event) {
+    document.querySelector('form').addEventListener('submit', function(event) 
+    {
     // Get the Date of Birth value from the input field
     const dob = document.getElementById('DateOfBirth').value;
 
@@ -35,8 +36,9 @@ function is16(dob) {
     }
 
     // Confirm with the user before submitting the form
+   
+    });
     function Confirm()
     {
         confirm("Are you sure")
     }
-});
