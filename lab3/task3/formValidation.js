@@ -35,10 +35,14 @@ function is16(dob) {
         return;
     }
 
-    if(!confirm("Are you sure"))
+    if(confirm("Are you sure"))
         {
             event.preventDefault();
         }
+    else
+    {
+        event. preventDefault()
+    }
     // Confirm with the user before submitting the form
    
     });
