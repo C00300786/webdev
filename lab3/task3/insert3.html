@@ -26,7 +26,8 @@
 </head>
 <body>
     <!-- Start of the form, submitting to 'insert3.php' using POST method -->
-    <form action="insert3.php" method="post" onsubmit="return is16(dob)">
+    <form action="insert3.php" method="post" onsubmit="return is16(document.getElementById('DateOfBirth').value)">
+
         
         <!-- Student Name input field -->
         <p>
