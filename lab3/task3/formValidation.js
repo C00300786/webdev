@@ -35,13 +35,11 @@ function is16(dob) {
         return;
     }
 
+    if(!confirm("Are you sure"))
+        {
+            event.preventDefault();
+        }
     // Confirm with the user before submitting the form
    
     });
-    function Confirm(SubmitEvent)
-    {
-        if(!confirm("Are you sure"))
-        {
-            SubmitEvent.preventDefault();
-        }
-    }
+    
