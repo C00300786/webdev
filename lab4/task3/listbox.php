@@ -3,10 +3,10 @@
     ID: C00300786
 -->
 <?php
-include "db.inc1.php"; //database connection
+include "db.inc.php"; //database connection
 date_default_timezone_set('UTC');
 
-$sql = "SELECT StudentId, StudentName, StudentAddress, StudentPhone, GradePointAverage, DateOfBirth, YearBeganCourse, CourseCode FROM Student";
+$sql = "SELECT * FROM Students";
 
 if (!$result = mysqli_query($con, $sql)) //error check
 {

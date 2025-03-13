@@ -3,12 +3,12 @@
     ID: C00300786
 -->
 <?php
-include 'db.inc1.php'; //links to php which connects to database
+include 'db.inc.php'; //links to php which connects to database
 
 date_default_timezone_set('UTC'); //sets default timezone as utc 
 $dbDate = date("Y-m-d", strtotime($_POST['amendDOB'])); //grabs dob from form and formats it 
 
-$sql = "UPDATE Student SET StudentName = '$_POST[amendname]',
+$sql = "UPDATE Students SET StudentName = '$_POST[amendname]',
         StudentAddress = '$_POST[amendaddress]',
         StudentPhone = '$_POST[amendphone]', 
         GradePointAverage = '$_POST[amendgrade]',
