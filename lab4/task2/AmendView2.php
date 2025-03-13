@@ -1,8 +1,6 @@
-<!--Jamie wiilliamson
-//C00300786
-//30/01/2025
-//SQL sheet 2
-//task 4
+<!--
+    Name: Jamie WIlliamson
+    ID: C00300786
 -->
 <?php
 include 'db.inc.php';
