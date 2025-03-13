@@ -32,6 +32,9 @@ function populate()
     document.getElementById("amendfirstname").value = personDetails[1];
     document.getElementById("amendlastname").value = personDetails[2];
     document.getElementById("amendDOB").value = personDetails[3];
+    document.getElementById("amendemail").value = personDetails[4];
+    document.getElementById("amendphone").value = personDetails[5];
+    document.getElementById("amendflag").value = personDetails[6];
 }
 function toggleLock()
 {
