@@ -23,7 +23,10 @@ while ($row = mysqli_fetch_array($result))
     $dateofBirth = $row['DOB'];
     $dob = date_create( $row['DOB']);
     $dob = date_format($dob, "Y-m-d");
-    $allText = "$id, $fname, $sname, $dob";
+    $email = $row['Email'];
+    $phone = $row['Phone'];
+    $flag = $row['DeletedFlag'];
+    $allText = "$id, $fname, $sname, $dob, $email, $phone, $flag";
     echo "<option value = '$allText'>$fname $sname</option>";
 }
 echo "</select>";
