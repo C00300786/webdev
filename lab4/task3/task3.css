@@ -1,0 +1,45 @@
+/*<!--
+    Name: Jamie WIlliamson
+    ID: C00300786
+-->*/
+        .box {
+            width: 500px; /* width of box */
+            height: 570px; /* height of box */
+            box-sizing: border-box; /* makes the box content the same size including the border size */
+            background-color: whitesmoke; /* colour of box */
+            border: solid; /* creates a solid border */
+            border-width: 5px; /* width of border */
+            margin: 10px; /* creates an empty space around the box */
+        
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        li {
+            list-style-type: none; /*removes bullet points */
+            text-align: left; /* aligns text to the left */
+            position: relative; /* moves element depending on its current location */
+            left: 90px;
+        }
+
+        .myButton {
+            position: relative; /* moves element depending on its current location */
+            width: 100%; /* makes the width 100% of the page */
+            height: 22px; 
+            bottom: -5px;
+            background-color: black; /* background colour red */
+            color: white; /* white text */
+            text-align: center; /* centers text to the center */
+        
+        }
+
+        .inputbox {
+            position: relative; /* moves element depending on its current location */ 
+            width: 100%; /* makes the width 100% of the page */
+            background-color: lightgray; /* background colour red */
+            color: white; /* white text */
+            text-align: center; /* centers text to the center */
+        }
+        
