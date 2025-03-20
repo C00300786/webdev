@@ -18,5 +18,5 @@
     mysquli_close($con);
 ?>
 <script>
-    window.location = "telete.html.php"
+    window.location = "delete.html.php"
 </script>
