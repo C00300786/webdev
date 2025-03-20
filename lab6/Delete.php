@@ -1,7 +1,4 @@
-<?php session_start();
-      include 'menu.php'; 
-?>
-<br><br>
+
 <?php      
     include 'db.inc.php';
      

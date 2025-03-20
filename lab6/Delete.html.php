@@ -9,9 +9,6 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-        include 'menu.php'
-    ?>
     <h1> Delete a Person</h1>
     <h4>Please select a person then click the delete button</h4>
 
