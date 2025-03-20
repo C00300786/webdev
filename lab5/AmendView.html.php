@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<?php include "menu.php"; ?>
 <link rel="stylesheet" type="text/css" href="layout.css">
 </style>
 
