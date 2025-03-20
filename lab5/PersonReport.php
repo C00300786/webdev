@@ -117,11 +117,11 @@ function produceReport($con, $sql)
         $date = date_create($row['DOB']);
         $FDate = date_format($date, "d/m/Y");
         // echo report values for person
-        echo    "<td>".$row['lastName']."</td>
-                <td>".$row['firstName']."</td>
+        echo    "<td>".$row['lastname']."</td>
+                <td>".$row['firstname']."</td>
                 <td>".$FDate."</td>
-                <td>".$row['email']."</td>
-                <td>".$row['phone']."</td>
+                <td>".$row['Email']."</td>
+                <td>".$row['Phone']."</td>
                 </tr>";
     }
     // close the table
