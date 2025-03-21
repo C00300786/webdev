@@ -41,7 +41,7 @@ if (isset($_POST['loginName']) && isset($_POST['password']))
                  
                  <input type = 'button' value = 'Change Password' onclick = 'window.location = \"changePass.php\"'>  
 
-                 <input type = 'button' value = 'Main Menu' onclick = 'window.location = \"menu.php\"'>  "
+                 <input type = 'button' value = 'Main Menu' onclick = 'window.location = \"menu.php\"'>  ";
 
         }
     }
