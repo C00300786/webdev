@@ -2,10 +2,10 @@
 <?php include 'db.inc.php';
 session_start();
 echo '<link rel="stylesheet" href= "pass.css" type="text/css">';
-if (isset($_POST['LoginName']) && isset($_POST['PassWord']))
+if (isset($_POST['loginName']) && isset($_POST['passWord']))
 {
     $attempts = $_SESSION['attempts'];
-    $sql = "SELECT * FROM password WHERE LoginName = '$_POST[LoginName]' AND PassWord='$_POST[PassWord]'";
+    $sql = "SELECT * FROM password WHERE loginName = '$_POST[loginName]' AND passWord = '$_POST[passWord]'";
 
     if (!mysqli_query($con, $sql))
     {
@@ -13,7 +13,7 @@ if (isset($_POST['LoginName']) && isset($_POST['PassWord']))
     }
     else
     {
-        if (mysqli_affected_rows($con)== 0)
+        if (mysqli_affected_rows($con) == 0)
         {
             $attempts++;
 
@@ -32,7 +32,7 @@ if (isset($_POST['LoginName']) && isset($_POST['PassWord']))
         else
         {
             //Sucessful login
-            $_SESSION['user'] = $_POST['LoginName']; //sess var to keep track of login name
+            $_SESSION['user'] = $_POST['loginName']; //sess var to keep track of login name
                                                     // for change pass screne
             
             echo"<h2>  Login Successful!</h2>
@@ -59,10 +59,10 @@ function BuildPage($att)
             <form action = 'loginScreen.php' method = 'post'>
             <h1> My website</h1>
             <h2> Attempt num: $att </h2>
-            <label for='LoginName'>Login Name</label>
-            <input type = 'text' name = 'LoginName' id = 'LoginName' autocomplete = 'off' /><br><br>
-            <label for='password' >Password</label>
-            <input type='password' name= 'password' id = 'password' ><br><br>
+            <label for='loginName'>Login Name</label>
+            <input type = 'text' name = 'loginName' id = 'loginName' autocomplete = 'off' /><br><br>
+            <label for='passWord' >Password</label>
+            <input type='password' name= 'passWord' id = 'passWord' ><br><br>
             <input type='submit' value = 'Submit'>
             
             </form>";
