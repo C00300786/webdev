@@ -12,7 +12,7 @@ a:link, a:visited { /*Creates a button-like link*/
 }
 
 a:hover, a:active { /* Hovering over button link changes its colour */
-  background-color: red;
+  background-color: black;
 }
 </style>
 </head>
