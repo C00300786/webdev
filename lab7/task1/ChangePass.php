@@ -10,9 +10,9 @@ if (isset($_SESSION['user'])) // checks whether a user has logged in
             $new = $_POST['newPass'];
             $confirm = $_POST['confirmPass'];
 
-            $user_SESSION['user'];
+            $user = $_SESSION['user'];
 
-            $sql = "SELECT * FROM password WHERE loginName '$user' AND passWord = '$_POST[oldPass]'";
+            $sql = "SELECT * FROM password WHERE loginName = '$user' AND passWord = '$_POST[oldPass]'";
                 if (! mysqli_query($con, $sql))
                     {
                         echo "Error in the Select query". mysqli_error($con);
@@ -58,7 +58,7 @@ if (isset($_SESSION['user'])) // checks whether a user has logged in
         else
         {
             //building page for intital dsplay
-            bulidPage("","","");
+            buildPage("","","");
         }
     }
 else 
