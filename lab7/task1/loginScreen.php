@@ -5,7 +5,7 @@ echo '<link rel="stylesheet" href= "pass.css" type="text/css">';
 if (isset($_POST['LoginName']) && isset($_POST['PassWord']))
 {
     $attempts = $_SESSION['attempts'];
-    $sql = "SELECT * FROM password WHERE loginName '$_POST[LoginName]' AND password='$_POST[PassWord]'";
+    $sql = "SELECT * FROM password WHERE LoginName = '$_POST[LoginName]' AND PassWord='$_POST[PassWord]'";
 
     if (!mysqli_query($con, $sql))
     {
