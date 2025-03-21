@@ -1,72 +1,90 @@
-
-<?php include 'db.inc.php';
+<!--
+    Name: Jamie WIlliamson
+    ID: C00300786
+-->
+<?php 
+// Include database connection
+include 'db.inc.php';
 session_start();
-echo '<link rel="stylesheet" href= "pass.css" type="text/css">';
-if (isset($_POST['loginName']) && isset($_POST['password']))
-{
-    $attempts = $_SESSION['attempts'];
-    $sql = "SELECT * FROM password WHERE loginName '$_POST[loginName]' AND password='$_POST[password]'";
 
-    if (!mysqli_query($con, $sql))
-    {
-        echo "Error in query". mysqli_error($con);
-    }
-    else
-    {
-        if (mysqli_affected_rows($con)== 0)
-        {
-            $attempts++;
+// Include external CSS file for styling
+echo '<link rel="stylesheet" href="pass.css" type="text/css">';
 
-            if ($attempts <=3)
-            { 
-                $_SESSION['attempts'] = $attempts;
+// Check if login credentials are submitted
+if (isset($_POST['LoginName']) && isset($_POST['PassWord'])) {
+    
+    // Retrieve the number of login attempts from session (default is 1)
+    $attempts = $_SESSION['attempts'] ?? 1;
+
+    // Query to check if the login credentials exist in the database
+    $sql = "SELECT * FROM password WHERE loginName = '$_POST[LoginName]' AND passWord = '$_POST[PassWord]'";
+    $result = mysqli_query($con, $sql);
+
+    // Check if the query execution was successful
+    if (!$result) {
+        echo "Error in query: " . mysqli_error($con);
+    } else {
+        // Check if no matching records were found (incorrect login credentials)
+        if (mysqli_num_rows($result) == 0) {
+            $attempts++; // Increment login attempt count
+            $_SESSION['attempts'] = $attempts; // Store updated attempts in session
+
+            // Allow up to 3 attempts before locking the user out
+            if ($attempts <= 3) {
                 buildPage($attempts);
-                 echo "<div class='errorstyle'>No record found with this login name and password combination - Please try again.</div>";
+                echo "<div class='errorstyle'>No record found with this login name and password combination - Please try again.</div>";
+            } else {
+                echo "<div class='errorstyle'>Sorry, you have used all 3 attempts.<br>Shutting down...</div>";
             }
-            else
-            {
-                 echo "<div class='errorstyle'>Sorry You have used all 3 attempts<br>
-                    Shutting down...</div>";
+        } else {
+            // **Successful login**
+            $user = mysqli_fetch_assoc($result); // Fetch user data from database
+            $_SESSION['user'] = $user['loginName']; // Store username in session
+
+            // **Check if today is the user's birthday**
+            $dob = $user['DOB']; // Get user's date of birth (YYYY-MM-DD format)
+            $today = date("m-d"); // Get today's date in MM-DD format
+            $userBirthday = date("m-d", strtotime($dob)); // Convert DOB to MM-DD format
+
+            // Display welcome message
+            echo "<h2>Login Successful!</h2>
+                  <h2>Welcome to the website, {$user['loginName']}!</h2>";
+
+            // **Show Happy Birthday message if today is the user's birthday**
+            if ($userBirthday == $today) {
+                echo "<h2 style='color: gold;'> Happy Birthday, {$user['loginName']}! </h2>";
             }
-        }
-        else
-        {
-            //Sucessful login
-            $_SESSION['user'] = $_POST['LoginName']; //sess var to keep track of login name
-                                                    // for change pass screne
-            
-            echo"<h2>  Login Successful!</h2>
-                 <h2>  Welcome tot he website</h2>
-                 <h3>  Do you want to change or go to the main menu?<h3>
-                 
-                 <input type = 'button' value = 'Change Password' onclick = 'window.location = \"changePass.php\"'>  
 
-                 <input type = 'button' value = 'Main Menu' onclick = 'window.location = \"menu.php\"'>  ";
-
+            // Provide options to change password or go to the main menu
+            echo "<h3>Do you want to change your password or go to the main menu?</h3>
+                  <input type='button' value='Change Password' onclick='window.location=\"changePass.php\"'>  
+                  <input type='button' value='Main Menu' onclick='window.location=\"menu.php\"'>";  
         }
     }
+} else {
+    // Display login form for initial access
+    $attempts = 1;
+    buildPage($attempts);
 }
-else
-{
-    //building page for initial display
-    $attempts = 1; // screen will be displayed for first attempt can be counted
-    buildPage($attempts); // parameter passed so that heading displays num of attempts
-};
-function BuildPage($att) 
-{
-    echo "  <body>
-            
-            <form action = 'loginscreen.php' method = 'post'>
-            <h1> My website</h1>
-            <h2> Attempt num: $att </h2>
+
+/**
+ * Function to generate the login form
+ * @param int $att - The current login attempt number
+ */
+function buildPage($att) {
+    echo "<body>
+            <form action='loginScreen.php' method='post'>
+            <h1>My Website</h1>
+            <h2>Attempt Number: $att</h2>
             <label for='LoginName'>Login Name</label>
-            <input type = 'text' name = 'LoginName' id = 'LoginName' autocomplete = 'off' /><br><br>
-            <label for='password' >Password</label>
-            <input type='password' name= 'password' id = 'password' ><br><br>
-            <input type='submit' value = 'Submit'>
-            
-            </form>";
+            <input type='text' name='LoginName' id='LoginName' autocomplete='off' /><br><br>
+            <label for='password'>Password</label>
+            <input type='password' name='PassWord' id='password'><br><br>
+            <input type='submit' value='Submit'>
+            </form>
+          </body>";
 }
+
+// Close database connection
 mysqli_close($con);
-?>"
-            
+?>
