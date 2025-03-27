@@ -21,8 +21,8 @@ a:hover, a:active { /* Hovering over button link changes its colour */
 <h1>Menu System</h1>
 
 <a href="menu.php">Home</a>
-<a href="insert1.html.php">Add a Record</a>
-<a href="view1.html.php">View a Record</a>
+<a href="insert.html.php">Add a Record</a>
+<a href="view.html.php">View a Record</a>
 <a href="AmendView.html.php">Amend/View Record</a>
 <a href="PersonReport.php">Report</a>
 
