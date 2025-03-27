@@ -46,7 +46,7 @@ if (isset($_SESSION['user'])) {
                         echo "<div class='errorstyle'>New password cannot be the same as the current password!</div>";
                     } else {
                         // Update the password in the database
-                        $sql = "UPDATE passwords SET passWord = '$_POST[newPass]' WHERE loginName = '$user'";
+                        $sql = "UPDATE password SET passWord = '$_POST[newPass]' WHERE loginName = '$user'";
                         if (!mysqli_query($con, $sql)) {    
                             echo "Error in Update query " . mysqli_error($con);
                         } else {
