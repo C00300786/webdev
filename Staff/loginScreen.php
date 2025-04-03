@@ -39,7 +39,7 @@ if (isset($_POST['LoginName']) && isset($_POST['PassWord'])) {
         } else {
             // **Successful login**
             $user = mysqli_fetch_assoc($result); // Fetch user data from database
-            $_SESSION['user'] = $user['loginName']; // Store username in session
+            $_SESSION['user'] = $user['LoginName']; // Store username in session
 
             // **Check if today is the user's birthday**
             $dob = $user['DOB']; // Get user's date of birth (YYYY-MM-DD format)
