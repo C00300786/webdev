@@ -36,7 +36,7 @@
         <!-- Date of Birth input field -->
         <p>
             <label for="phone">PhoneNum</label>
-            <input type="text" name="phone" id="phone" placeholder="Num" required/>
+            <input type="text" name="phone" id="phone" placeholder="Num" pattern="[\]*" required/>
         </p>
 
         <!-- Submit and Reset buttons -->

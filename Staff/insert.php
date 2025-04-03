@@ -18,7 +18,7 @@
     echo "Date of Birth is: " . date_format($date, "d/m/Y") . "<br>";
     
     // SQL query to insert the provided details into the database
-    $sql = "INSERT INTO Staff (FirstName, LastName, DOB, JobTitle, PhoneNum)
+    $sql = "INSERT INTO Staff (FirstName, SurName, DOB, JobTitle, PhoneNum)
             VALUES ('$_POST[firstname]', '$_POST[surname]', '$_POST[dob]','$_POST[job]','$_POST[phone]' )";
 
     // Execute the query and check for errors
