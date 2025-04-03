@@ -24,7 +24,7 @@ else
         echo mysqli_affected_rows($con)." record(s) updated <br>";
         echo "Person Id ".$_POST['amendid'].", ".$_POST['amendfirstname']
         ." ".$_POST['amendlastname']." ".$_POST['amendjob'].
-        " ".$_POST['amendphone']."" ".$_POST['amendflag']. has been updated";
+        " ".$_POST['amendphone']." ".$_POST['amendflag']." has been updated";
     }
     else
     {
