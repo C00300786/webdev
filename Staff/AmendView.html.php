@@ -32,7 +32,7 @@ function populate()
     document.getElementById("amendfirstname").value = personDetails[1];
     document.getElementById("amendlastname").value = personDetails[2];
     document.getElementById("amendDOB").value = personDetails[3];
-    document.getElementById("amendemail").value = personDetails[4];
+    document.getElementById("amendjob").value = personDetails[4];
     document.getElementById("amendphone").value = personDetails[5];
     document.getElementById("amendflag").value = personDetails[6];
 }
@@ -43,7 +43,7 @@ function toggleLock()
         document.getElementById("amendfirstname").disabled = false;
         document.getElementById("amendlastname").disabled = false;
         document.getElementById("amendDOB").disabled = false;
-        document.getElementById("amendemail").disabled = false;
+        document.getElementById("amendjob").disabled = false;
         document.getElementById("amendphone").disabled = false;
         document.getElementById("amendflag").disabled = false;
         document.getElementById("amendViewbutton").value = "View Details";
@@ -53,7 +53,7 @@ function toggleLock()
         document.getElementById("amendfirstname").disabled = true;
         document.getElementById("amendlastname").disabled = true;
         document.getElementById("amendDOB").disabled = true;
-        document.getElementById("amendemail").disabled = true;
+        document.getElementById("amendejob").disabled = true;
         document.getElementById("amendphone").disabled = true;
         document.getElementById("amendflag").disabled = true;
         document.getElementById("amendViewbutton").value = "Amend Details";
@@ -70,7 +70,7 @@ function confirmCheck()
         document.getElementById("amendfirstname").disabled = false;
         document.getElementById("amendlastname").disabled = false;
         document.getElementById("amendDOB").disabled = false;
-        document.getElementById("amendemail").disabled = false;
+        document.getElementById("amendejob").disabled = false;
         document.getElementById("amendphone").disabled = false;
         document.getElementById("amendflag").disabled = false;
         return true;
@@ -101,7 +101,7 @@ function confirmCheck()
 <label for="amendDOB">Date of Birth</label>
 <input type="date" name="amendDOB" id="amendDOB" title="format is dd-mm-yyyy" disabled>
 <br>
-<label for="amendejob">Job Title</label>
+<label for="amendjob">Job Title</label>
 <input type="text" name = "amendjob" id="amendjob" disabled>
 <br>
 <label for="amendphone">Phone Number</label>
