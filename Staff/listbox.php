@@ -18,8 +18,8 @@ echo "<br><select name = 'listbox' id= 'listbox' onclick= 'populate()'>";
 while ($row = mysqli_fetch_array($result))
 {
     $id = $row['Staffid'];
-    $fname = $row['Firstname'];
-    $sname = $row['Surname'];
+    $fname = $row['FirstName'];
+    $sname = $row['SurName'];
     $dateofBirth = $row['DOB'];
     $dob = date_create( $row['DOB']);
     $dob = date_format($dob, "Y-m-d");
