@@ -26,7 +26,7 @@ while ($row = mysqli_fetch_array($result))
     $Job = $row['JobTitle'];
     $phone = $row['PhoneNum'];
     $flag = $row['DeletedFlag'];
-    $allText = "$id, $fname, $sname, $dob, $email, $phone, $flag";
+    $allText = "$id, $fname, $sname, $dob, $Job, $phone, $flag";
     echo "<option value = '$allText'>$fname $sname</option>";
 }
 echo "</select>";
