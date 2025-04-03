@@ -17,7 +17,7 @@ echo "<br><select name = 'listbox' id= 'listbox' onclick= 'populate()'>";
 
 while ($row = mysqli_fetch_array($result))
 {
-    $id = $row['Staffid'];
+    $id = $row['StaffId'];
     $fname = $row['FirstName'];
     $sname = $row['SurName'];
     $dateofBirth = $row['DOB'];
