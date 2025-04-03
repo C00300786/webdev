@@ -30,7 +30,7 @@ if (isset($_POST['LoginName']) && isset($_POST['PassWord'])) {
             $_SESSION['attempts'] = $attempts; // Store updated attempts in session
 
             // Allow up to 2 attempts before locking the user out
-            if ($attempts <= 2) {
+            if ($attempts <= 3) {
                 buildPage($attempts);
                 echo "<div class='errorstyle'>No record found with this login name and password combination - Please try again.</div>";
             } else {
