@@ -27,6 +27,18 @@
             <input type="date" name="dob" id="dob" placeholder="Date of Birth" required/>
         </p>
 
+         <!-- Last name input field -->
+         <p>
+            <label for="job">Job Title</label>
+            <input type="text" name="job" id="job" placeholder="TITLE" required/>
+        </p>
+
+        <!-- Date of Birth input field -->
+        <p>
+            <label for="phone">PhoneNum</label>
+            <input type="text" name="phone" id="phone" placeholder="Num" required/>
+        </p>
+
         <!-- Submit and Reset buttons -->
         <br>
         <input type="submit" value="Submit"/> 
