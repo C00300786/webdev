@@ -17,7 +17,7 @@ if (isset($_POST['LoginName']) && isset($_POST['PassWord'])) {
     $attempts = $_SESSION['attempts'] ?? 1;
 
     // Query to check if the login credentials exist in the database
-    $sql = "SELECT * FROM StaffPassword WHERE loginName = '$_POST[LoginName]' AND password = '$_POST[PassWord]'";
+    $sql = "SELECT * FROM StaffPassword WHERE LoginName = '$_POST[LoginName]' AND Password = '$_POST[PassWord]'";
     $result = mysqli_query($con, $sql);
 
     // Check if the query execution was successful
