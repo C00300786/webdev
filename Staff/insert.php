@@ -18,8 +18,8 @@
     echo "Date of Birth is: " . date_format($date, "d/m/Y") . "<br>";
     
     // SQL query to insert the provided details into the database
-    $sql = "INSERT INTO persons (firstname, lastname, DOB)
-            VALUES ('$_POST[firstname]', '$_POST[surname]', '$_POST[dob]')";
+    $sql = "INSERT INTO Staff (FirstName, LastName, DOB, JobTitle, PhoneNum)
+            VALUES ('$_POST[firstname]', '$_POST[surname]', '$_POST[dob]','$_POST[job]','$_POST[phone]' )";
 
     // Execute the query and check for errors
     if (!mysqli_query($con, $sql)) {
@@ -35,7 +35,7 @@
 ?>
 
 <!-- Form to return to the insert page -->
-<form action="insert.html" method="POST">
+<form action="insert.html.php" method="POST">
     <br>
     <input type="submit" value="Return to Insert Page"/>
 </form>
