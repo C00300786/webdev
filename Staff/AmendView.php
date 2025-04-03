@@ -11,7 +11,7 @@ $dbDate = date("Y-m-d", strtotime($_POST['amendDOB'])); //to match date format i
 $sql = "UPDATE Staff SET Firstname = '$_POST[amendfirstname]',
         Surname = '$_POST[amendlastname]',
         DOB = '$dbDate',PhoneNum = '$_POST[amendphone]', JobTitle = '$_POST[amendjob]',
-        DeletedFlag = $_POST[amendflag]' WHERE StaffId = '$_POST[amendid]' ";
+        DeletedFlag = '$_POST[amendflag]' WHERE StaffId = '$_POST[amendid]' ";
 
 if (!mysqli_query($con, $sql))
 {
