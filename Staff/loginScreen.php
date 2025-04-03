@@ -41,20 +41,6 @@ if (isset($_POST['LoginName']) && isset($_POST['PassWord'])) {
             $user = mysqli_fetch_assoc($result); // Fetch user data from database
             $_SESSION['user'] = $user['LoginName']; // Store username in session
 
-            // **Check if today is the user's birthday**
-            $dob = $user['DOB']; // Get user's date of birth (YYYY-MM-DD format)
-            $today = date("m-d"); // Get today's date in MM-DD format
-            $userBirthday = date("m-d", strtotime($dob)); // Convert DOB to MM-DD format
-
-            // Display welcome message
-            echo "<h2>Login Successful!</h2>
-                  <h2>Welcome to the website, {$user['LoginName']}!</h2>";
-
-            // **Show Happy Birthday message if today is the user's birthday**
-            if ($userBirthday == $today) {
-                echo "<h2 style='color: gold;'> Happy Birthday, {$user['LoginName']}! </h2>";
-            }
-
             // Provide options to change password or go to the main menu
             echo "<h3>Do you want to change your password or go to the main menu?</h3>
                   <input type='button' value='Change Password' onclick='window.location=\"changePass.php\"'>  
